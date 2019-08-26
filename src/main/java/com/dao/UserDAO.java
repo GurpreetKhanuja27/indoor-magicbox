@@ -34,11 +34,11 @@ public class UserDAO {
     return 00;
     }
 
-    public boolean registerStudent(User registerUser) throws DuplicateIdException{
+    public int registerStudent(User registerUser) throws DuplicateIdException{
 
         String query = "insert into StudentRegistration (UniversityNumber, StuName, Sex) \n" +
                 "values( ?, ?, ?)";
-		boolean regStuStatus  = false;
+		int count  = 0;
         try {
             Class.forName("com.mysql.jdbc.Driver");
 
@@ -48,7 +48,7 @@ public class UserDAO {
             preparedStatement.setInt(1, registerUser.getUniversityNumber());
             preparedStatement.setString(2, registerUser.getStudentName());
             preparedStatement.setString(3, registerUser.getSex());
-            regStuStatus = preparedStatement.execute();
+            count = preparedStatement.executeUpdate();
            
 
         } catch (ClassNotFoundException e) {
@@ -57,7 +57,7 @@ public class UserDAO {
             //logging : log the root cause
         	throw new DuplicateIdException("Id" + registerUser.getUniversityNumber() + " is duplicate !!");
         }
-        return regStuStatus;
+        return count;
     }
 
 

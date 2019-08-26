@@ -74,7 +74,7 @@ public class UniversityController extends HttpServlet {
 			// passing the values to the registerUser class
 			User user = new User(universityNumber, studentName, sex);
 			try {
-				boolean regStuStatus = dao.registerStudent(user);
+				dao.registerStudent(user);
 				//view = request.getRequestDispatcher("home.jsp");
 				
 				//creates a new request for home.jsp
