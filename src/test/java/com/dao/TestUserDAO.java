@@ -17,6 +17,7 @@ import com.exceptions.DuplicateIdException;
 public class TestUserDAO {
 
 	@Test
+	@Ignore
 	public void testRegisterStudent() {
 		
 		UserDAO dao = new UserDAO();
@@ -32,5 +33,10 @@ public class TestUserDAO {
 		assertEquals(1,count);
 		
 	}
+	
+	public void testRegisterStudent() {
+	
+	
+	}	
 
 }
