@@ -45,5 +45,10 @@ public class TestUserDAO {
 	
 	
 	}	
+	
+	@Test
+	public void testUser() {
+		
+	}
 
 }
