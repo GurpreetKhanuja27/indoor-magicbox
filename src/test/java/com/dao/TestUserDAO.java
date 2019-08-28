@@ -5,6 +5,9 @@ package com.dao;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.bean.User;
@@ -17,6 +20,7 @@ import com.exceptions.DuplicateIdException;
 public class TestUserDAO {
 
 	@Test
+	@Ignore
 	public void testRegisterStudent() {
 		
 		UserDAO dao = new UserDAO();
@@ -32,5 +36,14 @@ public class TestUserDAO {
 		assertEquals(1,count);
 		
 	}
+	
+	@Test
+	public void testRegisteredStudentList() {
+		UserDAO dao = new UserDAO();
+		List<User> users = dao.registeredStudentList();
+		assertEquals(4,users.size());
+	
+	
+	}	
 
 }
