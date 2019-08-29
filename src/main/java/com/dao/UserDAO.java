@@ -97,5 +97,7 @@ public class UserDAO {
     
     public void updateStudent(User user) {
     	System.out.println("Updating exiting Student");
+    	System.out.println("This will update the student name or gender");
+    	System.out.println("Uno cannot be updated!!");
     }
 }
