@@ -96,6 +96,6 @@ public class UserDAO {
     }
     
     public void updateStudent(User user) {
-    	
+    	System.out.println("Updating exiting Student");
     }
 }
