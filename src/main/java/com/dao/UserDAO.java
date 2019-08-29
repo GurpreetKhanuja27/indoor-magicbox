@@ -97,5 +97,8 @@ public class UserDAO {
     
     public void updateStudent(User user) {
     	String query = "update studentRegistration set stuName = abc";
+    	//updating student
+    	
+    	
     }
 }
