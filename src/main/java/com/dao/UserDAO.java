@@ -94,4 +94,8 @@ public class UserDAO {
 
         return regList;
     }
+    
+    public void updateStudent(User user) {
+    	
+    }
 }
